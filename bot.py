@@ -17,9 +17,9 @@ session = AiohttpSession(proxy="http://proxy.server:3128")
 TOKEN = getenv("BOT_TOKEN")
 dp = Dispatcher()
 
-async def main(BOT_TOKEN=None) -> None:
+async def main() -> None:
     # bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
-    bot = Bot(token=BOT_TOKEN, session=session)
+    bot = Bot(token=TOKEN, session=session)
     dp.include_router(commands_router)
     dp.include_router(handlers_router)
     await set_bot_menu(bot)
