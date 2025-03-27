@@ -1,5 +1,4 @@
 import os
-from tkinter import image_types
 
 from aiogram import Router, F, types
 from aiogram.client import bot
